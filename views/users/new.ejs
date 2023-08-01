@@ -1,0 +1,107 @@
+    <%- include('../partials/header') %>
+		<!--**********************************
+            Content body start
+        ***********************************-->
+		<div class="content-body">
+			<form class="player-form">
+                <div class="card-body col">
+                    <h2>New Player</h2>
+                    <hr> 
+                    <div class="col-lg">
+                        <div class="card">
+
+                            <div class="card-body">
+                                         <!-- user Type  -->
+                                         <div class="mb-3 col-md-6">
+                                            <label for="type" class="form-label"> User Type </label>
+                                                <select id="type" class="form-select" style="border-color: #c72d29; background-color: white; font-size: 16px;"  aria-label="select type">
+                                                    <option selected>choose ..</option>
+                                                    <option value="player">Player</option>
+                                                    <option value="manager">Manger</option>
+                                                  </select>
+                                                </div>
+
+                                <div class="row">
+                                     
+                                    <!-- e-mail  -->
+                                    <div class="mb-3 col-md-6">
+                                        <label for="email" class="form-label"> E-mail </label>
+                                        <div class="input-primary">
+                                        <input id="email" type="email" class="form-control" placeholder="athletic@example.com">
+                                        </div>
+                                    </div>
+
+                                    <!-- sport type  -->
+                                    <div class="mb-3 col-md-6">
+                                        <label for="sport" class="form-label "> Sport Type </label>
+                                        <div class="input-primary">
+                                        <input id="sport" type="text" class="form-control" placeholder="sport type">
+                                        </div>
+                                    </div>
+
+                                    <!-- height -->
+                                    <div class="mb-3 col-md-6">
+                                        <label for="height" class="form-label"> Height </label>
+                                        <div class="input-group mb-3 input-primary">
+                                            <input id="height" type="number" class="form-control" placeholder="1.xx cm">
+											<span class="input-group-text">cm</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- weight  -->
+                                    <div class="mb-3 col-md-6">
+                                        <label for="weight" class="form-label"> Weight </label>
+                                        <div class="input-group mb-3 input-primary">
+                                            <input id="weight" type="number"  class="form-control" placeholder="Xx.x kg">
+											<span class="input-group-text">Kg</span>
+                                        </div>
+                                    </div>
+
+                                       <!-- birthday  -->
+                                       <div class="mb-3 col-md-6">
+                                        <label for="birthday" class="form-label"> Date of Birthday </label>
+                                        <div class="input-primary">
+                                        <input id="birthday" type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                            
+                                    <!-- gender  -->
+                                    <div class="mb-3 col-md-6">
+                                    <label for="gender" class="form-label"> Gender </label>
+                                        <select id="gender" class="form-select" style="border-color: #c72d29; background-color: white; font-size: 16px;"  aria-label="select gender">
+                                            <option selected>choose ..</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                          </select>
+                                        </div>
+
+                                     <!-- bodySize  -->
+                                     <div class="mb-3 col-md-6">
+                                        <label for="bodySize" class="form-label"> Body Size </label>
+                                        <div class="input-primary">
+                                        <input id="bodySize" type="text" class="form-control" placeholder="Ex: S, M, L">
+                                        </div>
+                                    </div>
+
+                                    <!-- footSize  -->
+                                    <div class="mb-3 col-md-6">
+                                        <label for="footSize" class="form-label"> Foot Size </label>
+                                        <div class="input-group mb-3 input-primary">
+                                            <input id="footSize" type="number" class="form-control" placeholder="xx cm">
+											<span class="input-group-text">cm</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <button type="submit" class="btn btn-primary">Add User</button>
+                 </div>
+            </form>
+
+		</div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        <%- include('../partials/footer') %>

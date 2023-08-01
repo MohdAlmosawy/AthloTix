@@ -1,0 +1,86 @@
+<%- include('../partials/header') %>
+		<!--**********************************
+            Content body start
+        ***********************************-->
+		<div class="content-body">
+			<form class="ticket-form">
+                <div class="card-body col">
+                    <h2>New Ticket</h2>
+                    <hr> 
+
+                    <!-- hiddden input for user -->
+                    <input type="hidden" name="user" id="user" value=" "> <!-- add the value from the controller (user ID) -->
+
+                    <!-- hidden input for the status  -->
+                    <input type="hidden" name="status" id="status" value="Open">
+                    <!-- value Open by default in the edit page should the manager can change the status of the ticket by selector  -->
+
+                    <!-- hidden input for the history -->
+                    <input type="hidden" name="history" id="history" value=" ">
+                    <!-- need discuss -->
+                    
+
+                        <!-- Select ticket category -->
+                        <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                               <label for="category"><h4 class="card-title">Category</h4></label>
+                            </div>
+                            <div class="card-body">
+                                        <div class="mb-3 mb-0">
+                                            <div class="radio">
+                                                <label><input value="Inquiry" id="category" type="radio" name="optradio" class="form-check-input"> Inquiry </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input value="Request" id="category" type="radio" name="optradio" class="form-check-input"> Request </label>
+                                            </div>
+                                            <div class="radio disabled">
+                                                <label><input value="Issue" id="category" type="radio" name="optradio" class="form-check-input"> Issue </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+
+                        <!-- ticket title -->
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <label for="title"><h4 class="card-title"> Title </h4></label>
+                                    </div>
+                                    <div class="card-body">
+                                            <div class="mb-3">
+                                                <input id="title" type="text" class="form-control input-default" placeholder="Type your ticket title">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
+                    
+
+                        <!-- ticket description -->
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <label for="description"><h4 class="card-title"> Description </h4></label>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <textarea class="form-control" rows="8" id="description" placeholder="Describe the case..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        
+                    <!-- submit button  -->
+                    <hr>
+                    <button type="submit" class="btn btn-primary">Submit Ticket</button>
+
+                </div>
+            </form>
+
+		</div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        <%- include('../partials/footer') %>
+     
