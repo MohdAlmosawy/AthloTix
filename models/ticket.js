@@ -21,7 +21,7 @@ const commentSchema = new Schema({
     },
     status: {
       type: String,
-      enum: ["Open", "In Review", "Action Needed", "Completed", "REjected"],
+      enum: ["Open", "In Review", "Action Needed", "Completed", "Rejected"],
       default: "Open"
     },
     title: {

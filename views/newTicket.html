@@ -142,6 +142,19 @@
                 <div class="card-body col">
                     <h2>New Ticket</h2>
                     <hr> 
+
+                    <!-- hiddden input for user -->
+                    <input type="hidden" name="user" id="user" value=" "> <!-- add the value from the controller (user ID) -->
+
+                    <!-- hidden input for the status  -->
+                    <input type="hidden" name="status" id="status" value="Open">
+                    <!-- value Open by default in the edit page should the manager can change the status of the ticket by selector  -->
+
+                    <!-- hidden input for the history -->
+                    <input type="hidden" name="history" id="history" value=" ">
+                    <!-- need discuss -->
+                    
+
                         <!-- Select ticket category -->
                         <div class="col-lg-6">
                         <div class="card">
