@@ -1,3 +1,4 @@
+//file : controllers/tickets.js
 const Ticket = require("../models/ticket");
 const User = require("../models/user");
 
@@ -6,15 +7,66 @@ async function ticketsIndex(req, res) {
   res.render('tickets/index', { title: 'All Tickets', AllTickets });
 }
 
-function newTicket(req, res) {
+function showNewTicketPage(req, res) {
   // We'll want to be able to render an  
   // errorMsg if the create action fails
   res.render('tickets/new', { title: 'Create New Ticket', errorMsg: '' });
 }
 
+//createTicket
+
+// async function createTicket(req, res) {
+//   try {
+//     const myLocalTicket = await Ticket.create(req.body);
+//     res.redirect(`/tickets/${myLocalTicket._id}`);
+//   } catch (err) {
+//     console.log(err);
+//     res.render('tickets/new', { title: 'Create New Ticket', errorMsg: err.message });
+//   }
+// }
+
+async function createTicket(req, res) {
+  // Get the form data from the request body
+  const { user, category, status, title, description } = req.body;
+
+  try {
+    // Create a new ticket document in the database
+    const newTicket = await Ticket.create({
+      user,
+      category,
+      status,
+      title,
+      description,
+      history: [], // Initialize the history as an empty array
+      comments: [] // Initialize the comments as an empty array
+    });
+
+    // Redirect to a success page or the ticket details page
+    res.redirect(`/tickets/${newTicket._id}`);
+  } catch (err) {
+    // Handle any errors that occur during ticket creation
+    console.log(err);
+    // You can render an error page or redirect back to the form with an error message
+    res.render('tickets/new', { title: 'Create New Ticket', errorMsg: 'Error creating ticket' });
+  }
+}
+
+//showTicket
+
+async function showTicket(req, res) {
+  try {
+    const thisLocalTicket = await Ticket.findById(req.params.id);
+    res.render('tickets/show', { title: 'Ticket', thisLocalTicket });
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 module.exports = {
   ticketsIndex,
-  newTicket,
+  showNewTicketPage,
+  createTicket,
+  showTicket,
 };
 
 // module.exports = {

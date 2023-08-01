@@ -1,27 +1,28 @@
+<!-- file : views/tickets/new.ejs -->
 <%- include('../partials/header') %>
 		<!--**********************************
             Content body start
         ***********************************-->
 		<div class="content-body">
-			<form class="ticket-form">
+			<form class="ticket-form" action="/tickets" method="POST">
                 <div class="card-body col">
                     <h2>New Ticket</h2>
                     <hr> 
 
                     <!-- hiddden input for user -->
-                    <input type="hidden" name="user" id="user" value=" "> <!-- add the value from the controller (user ID) -->
+                    <!-- this is haaaard coded now !!!!!!!!!!!!!!!!!!!!!!!!!!!!! CHANGE IT !!!!!!!!!!!!!!!!!!!!! -->
+                    <input type="hidden" name="user" id="user" value="64c9550d4d8c7177481e0a7d">
+                    <!-- used req.user.id later when we use passport.js -->
+                    <!-- add the value from the controller (user ID) -->
 
                     <!-- hidden input for the status  -->
                     <input type="hidden" name="status" id="status" value="Open">
                     <!-- value Open by default in the edit page should the manager can change the status of the ticket by selector  -->
 
-                    <!-- hidden input for the history -->
-                    <input type="hidden" name="history" id="history" value=" ">
-                    <!-- need discuss -->
-                    
+                    <!-- I removed history input because the history will be created automatically in the controller -->
 
                         <!-- Select ticket category -->
-                        <div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="card">
                             <div class="card-header">
                                <label for="category"><h4 class="card-title">Category</h4></label>
@@ -29,32 +30,38 @@
                             <div class="card-body">
                                         <div class="mb-3 mb-0">
                                             <div class="radio">
-                                                <label><input value="Inquiry" id="category" type="radio" name="optradio" class="form-check-input"> Inquiry </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label><input value="Request" id="category" type="radio" name="optradio" class="form-check-input"> Request </label>
-                                            </div>
-                                            <div class="radio disabled">
-                                                <label><input value="Issue" id="category" type="radio" name="optradio" class="form-check-input"> Issue </label>
-                                            </div>
+                                                <label>
+                                                  <input value="Inquiry" type="radio" name="category" class="form-check-input" required> Inquiry
+                                                </label>
+                                              </div>
+                                              <div class="radio">
+                                                <label>
+                                                  <input value="Request" type="radio" name="category" class="form-check-input" required> Request
+                                                </label>
+                                              </div>
+                                              <div class="radio">
+                                                <label>
+                                                  <input value="Issue" type="radio" name="category" class="form-check-input" required> Issue
+                                                </label>
+                                              </div>
                                         </div>
-                                    </div>
-                                 </div>
                             </div>
+                        </div>
+                    </div>
 
                         <!-- ticket title -->
                         <div class="col-lg-6">
                             <div class="card">
                                 <div class="card-header">
                                     <label for="title"><h4 class="card-title"> Title </h4></label>
-                                    </div>
+                                </div>
                                     <div class="card-body">
                                             <div class="mb-3">
-                                                <input id="title" type="text" class="form-control input-default" placeholder="Type your ticket title">
+                                                <input id="title" type="text" class="form-control input-default" name="title" placeholder="Type your ticket title">
                                             </div>
-                                        </div>
                                     </div>
-                                </div>  
+                            </div>
+                        </div>  
                     
 
                         <!-- ticket description -->
@@ -65,7 +72,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="mb-3">
-                                        <textarea class="form-control" rows="8" id="description" placeholder="Describe the case..."></textarea>
+                                        <textarea class="form-control" rows="8" id="description" name="description" placeholder="Describe the case..." ></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +80,7 @@
                         
                     <!-- submit button  -->
                     <hr>
-                    <button type="submit" class="btn btn-primary">Submit Ticket</button>
+                    <button type="submit" class="btn btn-primary">Create New Ticket</button>
 
                 </div>
             </form>
