@@ -10,6 +10,6 @@ router.get('/new', ticketsController.showNewTicketPage);
 // POST /tickets (actually creating new ticket)
 router.post('/', ticketsController.createTicket);
 // GET /tickets/:id
- router.get('/:id', ticketsController.showTicket);
+router.get('/:id', ticketsController.showTicket);
 
 module.exports = router;

@@ -41,7 +41,7 @@ Content body start
 											  <td>
 												<span class="badge <%= (T.status === 'Open') ? 'badge-dark' : (T.status === 'In Review') ? 'badge-warning' : (T.status === 'Action Needed') ? 'badge-dark' : (T.status === 'Completed') ? 'badge-success' : 'badge-danger' %>"><%= T.status %></span>
 											  </td>
-											  <td><a href="#">Show Details</a></td>
+											  <td><a href="/tickets/<%= T._id %>">Show Details</a></td>
 											</tr>
 										<% }) %>
 									</tbody>
