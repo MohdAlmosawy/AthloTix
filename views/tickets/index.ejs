@@ -32,16 +32,18 @@ Content body start
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>I need a new shoe</td>
-											<td>i asked for a new shoe from a month and no response</td>
-											<td>Mustafa</td>
-											<td>Request</td>
-											<td>
-												<span class="badge badge-info">Inprogress</span>
-											</td>
-											<td><a href="#">Show Details</a></td>
-										</tr>
+										<% AllTickets.forEach(function(T) { %>
+											<tr>
+											  <td><%= T.title %></td>
+											  <td><%= T.description %></td>
+											  <td><%= T.user %></td>
+											  <td><%= T.category %></td>
+											  <td>
+												<span class="badge <%= (T.status === 'Open') ? 'badge-dark' : (T.status === 'In Review') ? 'badge-warning' : (T.status === 'Action Needed') ? 'badge-dark' : (T.status === 'Completed') ? 'badge-success' : 'badge-danger' %>"><%= T.status %></span>
+											  </td>
+											  <td><a href="#">Show Details</a></td>
+											</tr>
+										<% }) %>
 									</tbody>
 								</table>
 							</div>
