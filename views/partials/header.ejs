@@ -4,10 +4,12 @@
 <head>
     <title>AthloTix - Bahrain Athletic Association Support Ticketing System </title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../public/images/favicon.png">
-	<link href="../public/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="../public/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
-    <link href="../public/css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+
+	<link href="/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 	<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
 
 </head>
@@ -38,7 +40,7 @@
         <div class="nav-header">
             <a href="index.html" class="brand-logo">   
 				<svg class="logo-abbr" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-					<image id="image0_2_3" width="50" height="50" xlink:href="../public/images/logo.png"/>
+					<image id="image0_2_3" width="50" height="50" xlink:href="/images/logo.png"/>
 				</svg>
             </a>
         </div>
@@ -67,7 +69,7 @@
 							</li>
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link"  href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                                    <img src="../public/images/profile/12.png" width="20" alt="">
+                                    <img src="/images/profile/12.png" width="20" alt="">
 									<div class="header-info">
 										<span>David<i class="fa fa-caret-down ms-3" aria-hidden="true"></i></span>
 									</div>
@@ -133,102 +135,3 @@
         <!--**********************************
             Sidebar end
         ***********************************-->
-		
-		<!--**********************************
-            Content body start
-        ***********************************-->
-		<div class="content-body">
-			<!-- row -->
-			<div class="container-fluid">
-				<div class="row page-titles">
-					<h4>Dashboard</h1>
-				</div>
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="card">
-							<div class="card-header">
-								<h4 class="card-title">All Ticket</h4>
-								<a href="create-ticket.html" class="btn btn-primary">Add ticket</a>
-							</div>
-							<div class="card-body">
-								<div class="table-responsive ticket-table">
-									<table id="example" class="display dataTablesCard table-responsive-xl"
-										style="min-width: 845px">
-										<thead>
-											<tr>
-												<th>Title</th>
-												<th>Description</th>
-												<th>User</th>
-												<th>Category</th>
-												<th>Status</th>
-												<th>Actions</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>I need a new shoe</td>
-												<td>i asked for a new shoe from a month and no response</td>
-												<td>Mustafa</td>
-												<td>Request</td>
-												<td>
-													<span class="badge badge-info">Inprogress</span>
-												</td>
-												<td><a href="#">Show Details</a></td>
-											</tr>
-										</tbody>
-		
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-        <!--**********************************
-            Content body end
-        ***********************************-->
-
-        <!--**********************************
-            Footer start
-        ***********************************-->
-        <div class="footer">
-            <div class="copyright">
-                <p>Copyright © Designed &amp; Developed by <a href="#" target="_blank">SEI5 - Team One </a> 2023</p>
-            </div>
-        </div>
-        <!--**********************************
-            Footer end
-        ***********************************-->
-
-		<!--**********************************
-           Support ticket button start
-        ***********************************-->
-
-        <!--**********************************
-           Support ticket button end
-        ***********************************-->
-
-
-    </div>
-    <!--**********************************
-        Main wrapper end
-    ***********************************-->
-
-    <!--**********************************
-        Scripts
-    ***********************************-->
-    <!-- Required vendors -->
-    <script src="../public/vendor/global/global.min.js"></script>
-	<script src="../public/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-	<script src="../public/vendor/chart.js/Chart.bundle.min.js"></script>
-	<script src="../public/vendor/owl-carousel/owl.carousel.js"></script>
-	<!-- Datatable -->
-	<script src="../public/vendor/datatables/js/jquery.dataTables.min.js"></script>
-	<script src="../public/js/plugins-init/datatables.init.js"></script>
-	<script src="../public/js/custom.min.js"></script>
-	<script src="../public/js/deznav-init.js"></script>
-	
-    
-</body>
-</html>
