@@ -29,8 +29,7 @@ function newUser(req, res) {
 }
 
 async function create(req, res) {
-  console.log(`req.body ===> ${JSON.stringify(req.body)}`);
-
+  // console.log(`req.body ===> ${JSON.stringify(req.body)}`);
   if (req.body)
     try {
       await User.create(req.body);
