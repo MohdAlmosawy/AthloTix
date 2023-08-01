@@ -31,9 +31,15 @@ const commentSchema = new Schema({
         type: String,
     },
     history: [{
+      status: {
+        type: String,
+        enum: ["Open", "In Review", "Action Needed", "Completed", "Rejected"]
+      },
+      date: {
         type: Date,
-        // not sure
-      }],
+        default: Date.now
+      }
+    }],
     comments: [commentSchema]
   });
 
