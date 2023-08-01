@@ -6,8 +6,15 @@ async function ticketsIndex(req, res) {
   res.render('tickets/index', { title: 'All Tickets', AllTickets });
 }
 
+function newTicket(req, res) {
+  // We'll want to be able to render an  
+  // errorMsg if the create action fails
+  res.render('tickets/new', { title: 'Create New Ticket', errorMsg: '' });
+}
+
 module.exports = {
-  ticketsIndex
+  ticketsIndex,
+  newTicket,
 };
 
 // module.exports = {
