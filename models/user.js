@@ -28,7 +28,7 @@ const Schema = mongoose.Schema;
     },
     bodySize: {
         type: String,
-        enum: ['small','medium', 'large']
+        match: ['XS','S','M', 'L', 'XL']
     },
     footSize: {
         type: Number,
