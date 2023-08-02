@@ -3,9 +3,17 @@ var router = express.Router();
 const usersCtrl = require('../controllers/users');
 
 
-
+// GET index
+router.get('/index',usersCtrl.index);
+// users/new
 router.get('/new',usersCtrl.new);
-router.get('/new',usersCtrl.create);
+//Get one user/show
+router.get('/:id', usersCtrl.show);
+// create 
+router.post('/',usersCtrl.create);
+// delete
+router.delete('/:id', usersCtrl.delete);
 
 module.exports = router;
+
 
