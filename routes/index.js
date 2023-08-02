@@ -19,8 +19,9 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/movies',
-    failureRedirect: '/movies'
+    // the redirect location to dashboard
+    successRedirect: '/users/index', 
+    failureRedirect: '/'
   }
 ));
 // OAuth logout route
@@ -37,5 +38,7 @@ router.get('/', function(req, res, next) {
 });
 
 
+
+//get movies
 
 module.exports = router;
