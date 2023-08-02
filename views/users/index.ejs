@@ -21,17 +21,14 @@
                             <div class="card">
                                 <div class="card-header flex-wrap">
                                       <h4 class="card-title">Athlete List</h4>
-                                      <a href="add-Athlete.html" class="btn btn-primary me-3 mt-2 mt-sm-0"><i class="feather feather-user-plus"></i> Add Athlete</a>
+                                      <a href="new" class="btn btn-primary me-3 mt-2 mt-sm-0"><i class="feather feather-user-plus"></i> Add User </a>
                                  </div>
                                  <div class="card-body">
                                      <div class="table-responsive ticket-table ">
                                         <div id="example_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="example_length"></div><div id="example_filter" class="dataTables_filter"></div><table id="example" class="display dataTablesCard table-responsive-xl dataTable no-footer" style="min-width: 845px" role="grid" aria-describedby="example_info">
                                             <thead>
                                                 <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="
-                                                    
-                                                        
-                                                        
-                                                    
+                                          
                                                 : activate to sort column descending" style="width: 81.5625px;">
                                                     <div class="form-check custom-checkbox ms-2">
                                                         <input type="checkbox" class="form-check-input" id="checkAll002" required="">
@@ -40,10 +37,7 @@
                                                 </th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 279.016px;">Name</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Gender: activate to sort column ascending" style="width: 141.125px;">Gender</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="User Type: activate to sort column ascending" style="width: 180.375px;">User Type</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="game genre: activate to sort column ascending" style="width: 232.375px;">game genre</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="DOB: activate to sort column ascending" style="width: 203.188px;">DOB</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Body Size: activate to sort column ascending" style="width: 129.984px;">Body Size</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 147.375px;">Actions</th></tr>
                                             </thead>
                                             <tbody>
-                                                
-                                    
-                                                
-                                              
+                                                <% users.forEach(function (u) { %>
                                             <tr class="odd" role="row">
                                                     <td class="sorting_1">
                                                         <div class="form-check custom-checkbox ms-2">
@@ -54,23 +48,23 @@
                                                     
                                                     <td>						
                                                         <div>
-                                                            <a href="#" class="h5">Sayed Mustafa</a>
+                                                            <a href="#" class="h5">(from Google Auth)</a>
                                                         </div>
-                                                        <small class="fs-12 text-muted"> <span class="font-weight-normal1">qarooni197@gmail.com</span></small>
+                                                        <small class="fs-12 text-muted"> <span class="font-weight-normal1"><%= u.email %></span></small>
                                                         
                                                     </td>
-                                                    <td>Male</td>
-                                                    <td>Player</td>
+                                                    <td><%= u.gender %></td>
+                                                    <td><%= u.type %></td>
                                                     <td>
-                                                        <span class="badge light badge-success">Long Jump</span>
+                                                        <span class="badge light badge-success"><%= u.sport %></span>
                                                     </td>
                                                     <td>
-                                                        <span class="badge light  badge-danger">19-7-1999</span>
+                                                        <span class="badge light  badge-danger"><%= u.DOB %></span>
                                                     </td>
                                                     <td>
-                                                        <span class="badge badge-success">Small</span>
+                                                        <span class="badge badge-success"><%= u.bodySize %></span>
                                                     </td>
-                                                    
+                                    
                                                     <td>
                                                         <div class="d-flex">
                                                             <a href="javascript:void(0);" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
@@ -84,101 +78,8 @@
                                                             <label class="form-check-label" for="customCheckBox4"></label>
                                                         </div>
                                                     </td>
+                                                    <%  }); %>
                                                     
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="h5">Sayed Mohamed</a>
-                                                        </div>
-                                                        <small class="fs-12 text-muted"> <span class="font-weight-normal1">sayed@gmail.com</span></small>
-                                                        
-                                                    </td>
-                                                    <td>Male</td>
-                                                    <td>Management User</td>
-                                                    <td>
-                                                        <span class="badge light badge-success">***</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge light  badge-danger">***</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge badge-success">Medium</span>
-                                                    </td>
-                                                    
-                                                    <td>
-                                                        <div class="d-flex">
-                                                            <a href="javascript:void(0);" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-                                                            <a href="javascript:void(0);" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-                                                        </div>
-                                                    </td>
-                                                </tr><tr class="odd" role="row">
-                                                    <td class="sorting_1">
-                                                        <div class="form-check custom-checkbox ms-2">
-                                                            <input type="checkbox" class="form-check-input" id="customCheckBox5" required="">
-                                                            <label class="form-check-label" for="customCheckBox5"></label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="h5">Fatyma</a>
-                                                        </div>
-                                                        <small class="fs-12 text-muted"> <span class="font-weight-normal1">fatyma@gmail.com</span></small>
-                                                        
-                                                    </td>
-                                                    <td>Female</td>
-                                                    <td>Player</td>
-                                                    <td>
-                                                        <span class="badge light badge-success">100M</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge light  badge-danger">10-10-1999</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge badge-success">small</span>
-                                                    </td>
-                                                    
-                                                    <td>
-                                                        <div class="d-flex">
-                                                            <a href="javascript:void(0);" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-                                                            <a href="javascript:void(0);" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-                                                        </div>
-                                                    </td>
-                                                </tr><tr class="even" role="row">
-                                                    <td class="sorting_1">
-                                                        <div class="form-check custom-checkbox ms-2">
-                                                            <input type="checkbox" class="form-check-input" id="customCheckBox6" required="">
-                                                            <label class="form-check-label" for="customCheckBox6"></label>
-                                                        </div>
-                                                    </td>
-                                                    
-                                                    <td>
-                                                        <div>
-                                                            <a href="#" class="h5">Yousif</a>
-                                                        </div>
-                                                        <small class="fs-12 text-muted"> <span class="font-weight-normal1">Yousif@gmail.com</span></small>
-                                                        
-                                                    </td>
-                                                    <td>Male</td>
-                                                    <td>Player</td>
-                                                    <td>
-                                                        <span class="badge light badge-success">400M</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge light  badge-danger">20-8-1992</span>
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge badge-success">small</span>
-                                                    </td>
-                                                    
-                                                    <td>
-                                                        <div class="d-flex">
-                                                            <a href="javascript:void(0);" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-                                                            <a href="javascript:void(0);" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-                                                        </div>
-                                                    </td>
-                                               
-                                                </tr>
-                                                   
-                                                    </td>
                                                 </tr></tbody>
                                            
                                         </table></div>
@@ -190,6 +91,12 @@
                 </div>
 			</div>
 		</div>
+
+        <% users.forEach(function(user) { %>
+            <tr>
+              <td><%= user.email %></td>
+            </tr>
+            <% }); %>
         <!--**********************************
             Content body end
         ***********************************-->

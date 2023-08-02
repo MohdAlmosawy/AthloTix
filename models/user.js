@@ -16,8 +16,8 @@ const Schema = mongoose.Schema;
     height: {
         type: Number
     },
-    wieght: {
-        typeof: Number
+    weight: {
+        type: Number
     },
     DOB: {
         type: Date
@@ -28,7 +28,7 @@ const Schema = mongoose.Schema;
     },
     bodySize: {
         type: String,
-        match: ['XS','S','M', 'L', 'XL']
+        enum: ['XS','S','M', 'L', 'XL']
     },
     footSize: {
         type: Number,
