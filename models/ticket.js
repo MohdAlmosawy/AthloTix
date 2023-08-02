@@ -7,8 +7,19 @@ const commentSchema = new Schema({
     },
     datePosted: {
       type: Date,
-    }
-  });
+    },
+  // add the 3 new properties below
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  userName: String,
+  userAvatar: String
+}, {
+  timestamps: true
+});
+
 
   const ticketScheme = new mongoose.Schema({
     user: {
@@ -40,7 +51,18 @@ const commentSchema = new Schema({
         default: Date.now
       }
     }],
-    comments: [commentSchema]
-  });
+    comments: [commentSchema],
+    
+  // add the 3 new properties below
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  userName: String,
+  userAvatar: String
+}, {
+  timestamps: true
+});
 
 module.exports = mongoose.model('Ticket', ticketScheme);

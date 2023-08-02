@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 // optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
+
+//OAuth user schema
   
   const userSchema = new Schema({
     email: {
@@ -32,7 +34,18 @@ const Schema = mongoose.Schema;
     },
     footSize: {
         type: Number,
-    }
+    },
+    name: String,
+    googleId: {
+      type: String,
+      required: true
+    },
+    email: String,
+    avatar: String
+  }, {
+    
+  }, {
+    timestamps: true
   });
 
   // formmat the DOB dd/mm/yyyy
