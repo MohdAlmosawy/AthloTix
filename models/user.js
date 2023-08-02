@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 // optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
+
+//OAuth user schema
   
   const userSchema = new Schema({
     email: {
@@ -32,7 +34,10 @@ const Schema = mongoose.Schema;
     },
     footSize: {
         type: Number,
-    }
+    },
+    name: String
+  }, {
+    timestamps: true
   });
   
   // Compile the schema into a model and export it
