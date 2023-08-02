@@ -2,9 +2,9 @@
 const express = require('express');
 const router = express.Router();
 //add comments controller
-const commentsController = require('../controllers/commentsController');
+const commentsController = require('../controllers/comments');
 
 // POST /ticket/:id/comments (create comment)
-router.post('/:id/comments', commentsController.createNewComment);
+router.post('/tickets/:id/comments', commentsController.createNewComment);
 
 module.exports = router;
