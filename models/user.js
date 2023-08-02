@@ -35,7 +35,15 @@ const Schema = mongoose.Schema;
     footSize: {
         type: Number,
     },
-    name: String
+    name: String,
+    googleId: {
+      type: String,
+      required: true
+    },
+    email: String,
+    avatar: String
+  }, {
+    
   }, {
     timestamps: true
   });
