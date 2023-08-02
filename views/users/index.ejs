@@ -63,7 +63,7 @@
                                                 </td>
 
                                                 <td>
-                                                    <span class="badge light  badge-danger"><%= u.formattedDOB %></span>
+                                                    <span class="badge light  badge-danger"><%= u.DOB %></span>
                                                 </td>
 
                                                 <td>
@@ -73,12 +73,14 @@
                                                 <td>
                                                     <div class="d-flex">
                                                         <!-- Edit user  -->
-                                                        <a href="javascript:void(0);" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-                                                    
+                                                        <a class="btn btn-primary shadow btn-xs sharp me-1" href="/users/<%= u._id %>/edit"><i  class="fas fa-pencil-alt"></i></a>
+                                                                        
                                                         <!-- Delete user  -->
-                                                        <form action="/users/index/<%= u._id %>?_method=DELETE" method="POST">
-                                                            <button class="btn btn-danger shadow btn-xs sharp" type="submit"><i class="fa fa-trash"></i></a></button>
+                                                        <form action="/users/delete?id=<%= u._id %>&_method=DELETE" method="POST">
+                                                            <button class="btn btn-danger shadow btn-xs sharp" type="submit"><i class="fa fa-trash"></i></button>
+                                                
                                                           </form>
+                    
                                                     </div>
                                                 </td>
                                                 <%  }); %>
