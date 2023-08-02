@@ -47,14 +47,6 @@ const Schema = mongoose.Schema;
   }, {
     timestamps: true
   });
-
-  // formmat the DOB dd/mm/yyyy
-  userSchema.virtual('formattedDOB').get(function() {
-    const date = this.DOB.getDate().toString().padStart(2, '0');
-    const month = (this.DOB.getMonth() + 1).toString().padStart(2, '0');
-    const year = this.DOB.getFullYear().toString();
-    return `${date}/${month}/${year}`;
-  });
   
   // Compile the schema into a model and export it
   module.exports = mongoose.model('User', userSchema);

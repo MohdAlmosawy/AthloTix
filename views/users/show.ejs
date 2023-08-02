@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 <div class="content-body">
 <div class="card-body col">
+    <!-- need edit design -->
     <h1>User Details</h1>
     <hr> 
         <h2>Type: </h2>
@@ -19,7 +20,7 @@
         <h3><%= user.weight %></h3>
         <hr>
         <h2>DOB: </h2>
-        <h3><%= user.formattedDOB %></h3>
+        <h3><%= user.DOB %></h3>
         <hr>
         <h2>gender: </h2>
         <h3><%= user.gender %></h3>
@@ -31,6 +32,10 @@
         <h3><%= user.footSize %></h3>
         <hr>
         </section>
+        <!-- Delete user 
+        <form action="/users/?_method=DELETE" method="POST">
+            <button class="btn btn-danger shadow btn-xs sharp" type="submit"><i class="fa fa-trash"></i></a></button>
+          </form> -->
  </div>
 
 <%- include('../partials/footer') %>
