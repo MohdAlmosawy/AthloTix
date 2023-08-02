@@ -11,6 +11,8 @@ router.get('/new',usersCtrl.new);
 router.get('/:id', usersCtrl.show);
 // create 
 router.post('/',usersCtrl.create);
+// delete
+router.delete('/:id', usersCtrl.delete);
 
 module.exports = router;
 
