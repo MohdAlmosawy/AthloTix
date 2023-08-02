@@ -11,5 +11,7 @@ router.get('/new', ticketsController.showNewTicketPage);
 router.post('/', ticketsController.createTicket);
 // GET /tickets/:id
 router.get('/:id', ticketsController.showTicket);
+// POST /tickets/:id/update-category (updating ticket category)
+router.post('/:id/update-category', ticketsController.updateTicketCategory);
 
 module.exports = router;

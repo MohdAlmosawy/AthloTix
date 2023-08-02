@@ -62,11 +62,39 @@ async function showTicket(req, res) {
   }
 }
 
+async function updateTicketCategory(req, res) {
+  try {
+      const thisTicketId = req.params.id;
+      const newCategory = req.body.category;
+
+      // Find the ticket by ID
+      const myLocTicket = await Ticket.findById(thisTicketId);
+
+      if (!myLocTicket) {
+          // Handle ticket not found
+          return res.status(404).send('Ticket not found');
+      }
+
+      // Update the category
+      myLocTicket.category = newCategory;
+
+      // Save the updated ticket
+      await myLocTicket.save();
+
+      // Redirect back to the ticket's page
+      res.redirect(`/tickets/${myLocTicket._id}`);
+  } catch (err) {
+      console.error(err);
+      res.status(500).send('Internal Server Error');
+  }
+}
+
 module.exports = {
   ticketsIndex,
   showNewTicketPage,
   createTicket,
   showTicket,
+  updateTicketCategory,
 };
 
 // module.exports = {
