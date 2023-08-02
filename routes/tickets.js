@@ -13,5 +13,6 @@ router.post('/', ticketsController.createTicket);
 router.get('/:id', ticketsController.showTicket);
 // POST /tickets/:id/update-category (updating ticket category)
 router.post('/:id/update-category', ticketsController.updateTicketCategory);
-
+// POST /tickets/:id/update-Status (updating ticket status)
+ router.post('/:id/update-Status', ticketsController.updateTicketStatus);
 module.exports = router;
