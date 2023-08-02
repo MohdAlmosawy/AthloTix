@@ -6,6 +6,7 @@ module.exports = {
   new: newUser,
   create: create,
   show,
+  delete: deleteUser,
 };
 
 async function indexUser(req, res) {
@@ -40,3 +41,18 @@ async function create(req, res) {
       res.render("users/new", { errorMsg: err.message });
     }
 }
+
+async function deleteUser(req, res) {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) {
+      return res.redirect('/users');
+    }
+    await user.remove();
+    res.redirect('/users/index');
+  } catch (err) {
+    console.log(err);
+    res.redirect('/users/index');
+  }
+}
+
