@@ -17,9 +17,15 @@ passport.use(new GoogleStrategy(
       // try/catch block to handle an error
       try {
         // A user has logged in with OAuth...
-        let user = await User.findOne({ googleId: profile.id });
+        let user = await User.findOne({ email: profile.emails[0].value });
         // Existing user found, so provide it to passport
-        if (user) return cb(null, user);
+        if (user){
+          user.googleId = profile.id;
+          user.name = profile.displayName;
+          user.avatar = profile.photos[0].value;
+          user = await user.save();
+          return cb(null, user);
+        } 
         // We have a new user via OAuth!
         user = await User.create({
           name: profile.displayName,
@@ -43,3 +49,9 @@ passport.deserializeUser(async function(userId, cb) {
     cb(null, await User.findById(userId));
   });
     
+
+
+
+
+
+

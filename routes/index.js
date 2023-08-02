@@ -39,6 +39,5 @@ router.get('/', function(req, res, next) {
 
 
 
-//get movies
 
 module.exports = router;
