@@ -1,10 +1,11 @@
+// file : controller/comments.js
 const Ticket = require('../models/ticket');
 
 module.exports = {
-    create
+    createNewComment,
   };
 
-async function create(req, res){
+async function createNewComment(req, res){
     // Get the Ticket id from the request
     let id = req.params.id;
     // Get the ticket
@@ -19,5 +20,5 @@ async function create(req, res){
     } catch(err){
         console.error(err);
     }
-    res.redirect(301, `/ticketss/${ticket._id}/`);
+    res.redirect(`/ticketss/${ticket._id}/`);
 }

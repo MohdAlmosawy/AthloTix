@@ -37,7 +37,7 @@ async function createTicket(req, res) {
       status,
       title,
       description,
-      history: [], // Initialize the history as an empty array
+      history: [{ status, date: Date.now() }], // Initialize the history as an empty array
       comments: [] // Initialize the comments as an empty array
     });
 

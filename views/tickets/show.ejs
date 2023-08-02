@@ -228,81 +228,25 @@
 		<div id="DZ_W_Todo3"
 			class="widget-media px-4 dz-scroll height370 ps ps--active-y">
 			<ul class="timeline">
-				<li>
-					<div class="timeline-panel">
-						<div class="media me-2">
-							<img alt="image" width="50"
-								src="../public/images/avatar/1.jpg">
-						</div>
-						<div class="media-body">
-							<h5 class="mb-1">User Name <small
-									class="text-muted">29-1-2021
-									12:15pm</small></h5>
-							<p class="mb-1">I shared this on my fb wall
-								a few months back..</p>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="timeline-panel">
-						<div class="media me-2">
-							<img alt="image" width="50"
-								src="../public/images/avatar/1.jpg">
-						</div>
-						<div class="media-body">
-							<h5 class="mb-1">User Name <small
-									class="text-muted">29-1-2021
-									12:15pm</small></h5>
-							<p class="mb-1">I shared this on my fb wall
-								a few months back..</p>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="timeline-panel">
-						<div class="media me-2">
-							<img alt="image" width="50"
-								src="../public/images/avatar/1.jpg">
-						</div>
-						<div class="media-body">
-							<h5 class="mb-1">User Name <small
-									class="text-muted">29-1-2021
-									12:15pm</small></h5>
-							<p class="mb-1">I shared this on my fb wall
-								a few months back..</p>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="timeline-panel">
-						<div class="media me-2">
-							<img alt="image" width="50"
-								src="../public/images/avatar/1.jpg">
-						</div>
-						<div class="media-body">
-							<h5 class="mb-1">User Name <small
-									class="text-muted">29-1-2021
-									12:15pm</small></h5>
-							<p class="mb-1">I shared this on my fb wall
-								a few months back..</p>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="timeline-panel">
-						<div class="media me-2">
-							<img alt="image" width="50"
-								src="../public/images/avatar/1.jpg">
-						</div>
-						<div class="media-body">
-							<h5 class="mb-1">User Name <small
-									class="text-muted">29-1-2021
-									12:15pm</small></h5>
-							<p class="mb-1">I shared this on my fb wall
-								a few months back..</p>
-						</div>
-					</div>
-				</li>
+					<% if (thisLocalTicket.comments.length) { %>
+						<% thisLocalTicket.comments.forEach(function (comment) { %>
+							<li>
+								<div class="timeline-panel">
+									<div class="media me-2">
+										<img alt="image" width="50"
+											src="/images/avatar/1.jpg">
+									</div>
+									<div class="media-body">
+										<h5 class="mb-1">User Name Goes here <small
+												class="text-muted"><%= comment.datePosted.toDateString() %> - <%= comment.datePosted.toLocaleTimeString() %></small></h5>
+										<p class="mb-1"><%= comment.content %></p>
+									</div>
+								</div>
+							</li>
+						<% }); %>
+					<% } else { %>
+						<h5>No Comments Yet</h5>
+					<% } %>
 			</ul>
 			<div class="ps__rail-x" style="left: 0px; bottom: 0px;">
 				<div class="ps__thumb-x" tabindex="0"
@@ -315,18 +259,17 @@
 			</div>
 		</div>
 		<br><br>
-		<div class="post-input">
+	<div class="post-input">
+		<form id="add-comment-form" method="POST" action="/tickets/<%= thisLocalTicket._id %>/comments">
+
 			<h4 class="card-title">Add a Comment</h4>
-			<textarea name="textarea" id="textarea" cols="30" rows="8"
-				class="form-control bg-transparent"
-				placeholder="Please type what you want...."></textarea>
 
-			<a href="javascript:void(0);" class="btn btn-primary"
-				data-bs-toggle="modal"
-				data-bs-target="#postModal">Post</a>
+			<textarea name="textarea" id="textarea" cols="30" rows="8" class="form-control bg-transparent" placeholder="Please type your comment here"></textarea>
 
-		</div>
+			<button class="btn btn-primary" type="submit" value="Add Comment" id="add-comment" data-bs-toggle="modal" data-bs-target="#postModal">Add</button>
+		</form>
 	</div>
+</div>
 												</div>
 
 											</div>
