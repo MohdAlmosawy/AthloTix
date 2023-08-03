@@ -68,7 +68,7 @@ async function updateTicketCategory(req, res) {
       const newCategory = req.body.category;
 
       // Find the ticket by ID
-      const myLocTicket = await Ticket.findById(thisTicketId);
+    const myLocTicket = await Ticket.findById(thisTicketId);
 
       if (!myLocTicket) {
           // Handle ticket not found
@@ -96,6 +96,7 @@ async function updateTicketStatus(req, res) {
 
     // Find the ticket by ID
     const myLocTicket = await Ticket.findById(thisTicketId);
+    const changer = await User.findById(req.body.userID);
 
     if (!myLocTicket) {
       console.error('Ticket not found'); // Log the error
@@ -106,7 +107,7 @@ async function updateTicketStatus(req, res) {
       myLocTicket.status = newStatus;
 
       // Update the history with the new status
-      myLocTicket.history.push({ status: newStatus, date: Date.now() });
+      myLocTicket.history.push({ status: newStatus, date: Date.now(), userName: changer.name });
 
       // Save the updated ticket
       await myLocTicket.save();
