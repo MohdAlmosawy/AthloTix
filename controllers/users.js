@@ -12,7 +12,10 @@ module.exports = {
 };
 //get all users users/index
 async function indexUser(req, res) {
-  const users = await User.find({});
+  // const users = await User.find({});
+  // res.render("users/index", { users });
+  const user = await User.findById(req.user._id);
+  let users = user.type === 'manager' ? await User.find({}) : res.redirect("../tickets");
   res.render("users/index", { users });
 }
 //get one user users/show
@@ -27,8 +30,9 @@ async function show(req, res) {
   }
 }
 //render new user users/new 
-function newUser(req, res) {
-  res.render("users/new", { errorMsg: "" });
+ async function newUser(req, res) {
+  const user = await User.findById(req.user._id);
+  let users = user.type === 'manager' ? res.render("users/new") : res.redirect("../tickets");
 }
 
 //create new user 

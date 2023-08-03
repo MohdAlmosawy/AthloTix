@@ -9,10 +9,11 @@ async function ticketsIndex(req, res) {
   res.render('tickets/index', { title: 'All Tickets', allTickets });
 }
 
-function showNewTicketPage(req, res) {
+async function showNewTicketPage(req, res) {
   // We'll want to be able to render an  
   // errorMsg if the create action fails
-  res.render('tickets/new', { title: 'Create New Ticket', errorMsg: '' });
+  const user = await User.findById(req.user._id);
+  let users = user.type === 'athlete' ? res.render('tickets/new', { title: 'Create New Ticket', errorMsg: '' }) : res.redirect("../tickets");
 }
 
 //createTicket
