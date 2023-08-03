@@ -38,7 +38,7 @@ const Schema = mongoose.Schema;
     name: String,
     googleId: {
       type: String,
-      required: true
+      // required: true
     },
     email: String,
     avatar: String
