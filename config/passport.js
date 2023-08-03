@@ -27,12 +27,12 @@ passport.use(new GoogleStrategy(
           return cb(null, user);
         } 
         // We have a new user via OAuth!
-        user = await User.create({
-          name: profile.displayName,
-          googleId: profile.id,
-          email: profile.emails[0].value,
-          avatar: profile.photos[0].value
-        });
+        // user = await User.create({
+        //   name: profile.displayName,
+        //   googleId: profile.id,
+        //   email: profile.emails[0].value,
+        //   avatar: profile.photos[0].value
+        // });
         return cb(null, user);
       } catch (err) {
         return cb(err);
