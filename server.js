@@ -51,9 +51,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/tickets", ticketsRouter); //ticket router used
 app.use("/", commentsRouter); //comment router used
 
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  next(createError(404));
+  res.render('404.ejs', {title: 'Page Not Found'});
 });
 
 // error handler
