@@ -87,7 +87,7 @@
 					</div>
 					<a class="timeline-panel text-muted" href="javascript:void(0);">
 					  <span><%= historyItem.date.toLocaleString() %></span>
-					  <h6 class="mb-0">Ticket "<%= historyItem.status %>" by USERNAME</h6>
+					  <h6 class="mb-0">Ticket "<%= historyItem.status %>" by <%= historyItem.userName %></h6>
 					</a>
 				  </li>
 				<% }) %>
@@ -153,15 +153,16 @@
 			<div class="accordion-body" id="nestable2">
 				<div class="card-body">
 					<div class="basic-form">
-						<form action="/tickets/<%= thisLocalTicket._id %>/update-status">
+						<form action="/tickets/<%= thisLocalTicket._id %>/update-status" method="POST">
 							<div class="input-group">
-								<select class="form-select wide" aria-label="Default select example">
+								<select class="form-select wide" aria-label="Default select example" name="status">
 									<option <%= (thisLocalTicket.status === 'Open') ? 'selected' : '' %> value="Open"> Open </option>
 									<option <%= (thisLocalTicket.status === 'In Review') ? 'selected' : '' %> value="In Review"> In Review </option>
 									<option <%= (thisLocalTicket.status === 'Action Needed') ? 'selected' : '' %> value="Action Needed"> Action Needed</option>
 									<option <%= (thisLocalTicket.status === 'Completed') ? 'selected' : '' %> value="Completed"> Completed </option>
 									<option <%= (thisLocalTicket.status === 'Rejected') ? 'selected' : '' %> value="Rejected"> Rejected </option>
 								</select>
+								<input type="hidden" name="userID" value="<%= user._id %>">
 								<button class="btn btn-primary" type="submit">Save Changes</button>
 							</div>
 						</form>
@@ -197,15 +198,14 @@
 					<div class="col-xl-12">
 						<div class="card-body">
 							<div class="basic-form">
-								<form action="/tickets/<%= thisLocalTicket._id %>/update-status" method="POST">
+								<form action="/tickets/<%= thisLocalTicket._id %>/update-category" method="POST">
 									<div class="input-group">
-										<select class="form-select wide" aria-label="Default select example" name="status">
-											<option <%= (thisLocalTicket.status === 'Open') ? 'selected' : '' %> value="Open"> Open </option>
-											<option <%= (thisLocalTicket.status === 'In Review') ? 'selected' : '' %> value="In Review"> In Review </option>
-											<option <%= (thisLocalTicket.status === 'Action Needed') ? 'selected' : '' %> value="Action Needed"> Action Needed</option>
-											<option <%= (thisLocalTicket.status === 'Completed') ? 'selected' : '' %> value="Completed"> Completed </option>
-											<option <%= (thisLocalTicket.status === 'Rejected') ? 'selected' : '' %> value="Rejected"> Rejected </option>
+										<select class="form-select wide" aria-label="Default select example" name="category">
+											<option <%= thisLocalTicket.category === 'Inquiry' ? 'selected' : '' %> value="Inquiry"> Inquiry </option>
+											<option <%= thisLocalTicket.category === 'Request' ? 'selected' : '' %> value="Request"> Request </option>
+											<option <%= thisLocalTicket.category === 'Issue' ? 'selected' : '' %> value="Issue"> Issue </option>
 										</select>
+										<input type="hidden" name="userID" value="<%= user._id %>">
 										<button class="btn btn-primary" type="submit">Save Changes</button>
 									</div>
 								</form>
@@ -237,11 +237,10 @@
 								<div class="timeline-panel">
 									<div class="media me-2">
 										<img alt="image" width="50"
-											src="/images/avatar/1.jpg">
+											src="<%= comment.userAvatar %>">
 									</div>
 									<div class="media-body">
-										<h5 class="mb-1">User Name Goes here <small
-												class="text-muted"><%= comment.createdAt.toDateString() %> - <%= comment.createdAt.toLocaleTimeString() %></small></h5>
+										<h5 class="mb-1"><%= comment.userName %> <small class="text-muted"> - <%= comment.createdAt.toDateString() %> - <%= comment.createdAt.toLocaleTimeString() %></small></h5>
 										<p class="mb-1"><%= comment.content %></p>
 									</div>
 								</div>
