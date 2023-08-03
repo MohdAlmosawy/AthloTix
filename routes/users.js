@@ -2,21 +2,21 @@ var express = require('express');
 var router = express.Router();
 const usersCtrl = require('../controllers/users');
 
-
+const ensureLoggedIn = require('../config/ensureLoggedIn'); 
 // GET index
-router.get('/index',usersCtrl.index);
+router.get('/index',ensureLoggedIn,usersCtrl.index);
 // users/new
-router.get('/new',usersCtrl.new);
+router.get('/new',ensureLoggedIn,usersCtrl.new);
 //Get one user/show
-router.get('/:id', usersCtrl.show);
+router.get('/:id',ensureLoggedIn, usersCtrl.show);
 // create 
-router.post('/',usersCtrl.create);
+router.post('/',ensureLoggedIn,usersCtrl.create);
 // edit
-router.get('/:id/edit',usersCtrl.edit);
+router.get('/:id/edit',ensureLoggedIn,usersCtrl.edit);
 // delete
-router.delete('/delete', usersCtrl.delete);
+router.delete('/delete',ensureLoggedIn, usersCtrl.delete);
 //update
-router.put('/:id', usersCtrl.update);
+router.put('/:id',ensureLoggedIn, usersCtrl.update);
 
 module.exports = router;
 
