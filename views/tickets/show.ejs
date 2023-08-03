@@ -153,7 +153,7 @@
 			<div class="accordion-body" id="nestable2">
 				<div class="card-body">
 					<div class="basic-form">
-						<form action="#">
+						<form action="/tickets/<%= thisLocalTicket._id %>/update-status">
 							<div class="input-group">
 								<select class="form-select wide" aria-label="Default select example">
 									<option <%= (thisLocalTicket.status === 'Open') ? 'selected' : '' %> value="Open"> Open </option>
@@ -197,17 +197,20 @@
 					<div class="col-xl-12">
 						<div class="card-body">
 							<div class="basic-form">
-								<form action="/tickets/<%= thisLocalTicket._id %>/update-category" method="POST">
+								<form action="/tickets/<%= thisLocalTicket._id %>/update-status" method="POST">
 									<div class="input-group">
-										<select class="form-select wide" aria-label="Default select example" name="category">
-											<option <%= thisLocalTicket.category === 'Inquiry' ? 'selected' : '' %> value="Inquiry"> Inquiry </option>
-											<option <%= thisLocalTicket.category === 'Request' ? 'selected' : '' %> value="Request"> Request </option>
-											<option <%= thisLocalTicket.category === 'Issue' ? 'selected' : '' %> value="Issue"> Issue </option>
-										</select>										  
+										<select class="form-select wide" aria-label="Default select example" name="status">
+											<option <%= (thisLocalTicket.status === 'Open') ? 'selected' : '' %> value="Open"> Open </option>
+											<option <%= (thisLocalTicket.status === 'In Review') ? 'selected' : '' %> value="In Review"> In Review </option>
+											<option <%= (thisLocalTicket.status === 'Action Needed') ? 'selected' : '' %> value="Action Needed"> Action Needed</option>
+											<option <%= (thisLocalTicket.status === 'Completed') ? 'selected' : '' %> value="Completed"> Completed </option>
+											<option <%= (thisLocalTicket.status === 'Rejected') ? 'selected' : '' %> value="Rejected"> Rejected </option>
+										</select>
 										<button class="btn btn-primary" type="submit">Save Changes</button>
 									</div>
 								</form>
 							</div>
+							
 						</div>
 					</div>
 				</div>
