@@ -40,8 +40,9 @@ async function createTicket(req, res) {
       status,
       title,
       description,
-      history: [{ status, date: Date.now() }], // Initialize the history as an empty array
-      comments: [] // Initialize the comments as an empty array
+      history: [{ status, date: Date.now(), userName: req.user.name }], // Initialize the history as an empty array
+      comments: [], // Initialize the comments as an empty array
+      userName: req.user.name, // Set the userName field
     });
 
     // Redirect to a success page or the ticket details page
