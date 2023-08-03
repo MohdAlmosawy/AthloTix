@@ -2,5 +2,14 @@
     color: aliceblue;
 }
 
+.btn-red {
+    color: #fff;
+    background-color: #ff0000; /* Red color */
+    border-color: #ff0000; /* Red color */
+}
+
+.ybg{
+
+}
 
 /* lkj */
