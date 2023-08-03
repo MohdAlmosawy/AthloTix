@@ -91,16 +91,16 @@ async function updateTicketCategory(req, res) {
 
 async function updateTicketStatus(req, res) {
   try {
-      const thisTicketId = req.params.id;
-      const newStatus = req.body.status;
+    const thisTicketId = req.params.id;
+    const newStatus = req.body.status;
 
-      // Find the ticket by ID
-      const myLocTicket = await Ticket.findById(thisTicketId);
+    // Find the ticket by ID
+    const myLocTicket = await Ticket.findById(thisTicketId);
 
-      if (!myLocTicket) {
-          // Handle ticket not found
-          return res.status(404).send('Ticket not found');
-      }
+    if (!myLocTicket) {
+      console.error('Ticket not found'); // Log the error
+      return res.status(404).send('Ticket not found');
+    }
 
       // Update the status
       myLocTicket.status = newStatus;
@@ -114,10 +114,10 @@ async function updateTicketStatus(req, res) {
       // Redirect back to the ticket's page
       res.redirect(`/tickets/${myLocTicket._id}`);
   } catch (err) {
-      console.error(err);
+      console.error(err); // Log the error
       res.status(500).send('Internal Server Error');
+    }
   }
-}
 
 module.exports = {
   ticketsIndex,

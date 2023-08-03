@@ -47,6 +47,7 @@ app.use(function (req, res, next) {
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use(express.urlencoded({ extended: false }));
 app.use("/tickets", ticketsRouter); //ticket router used
 app.use("/", commentsRouter); //comment router used
 
