@@ -1,5 +1,6 @@
 // file : controller/comments.js
 const Ticket = require('../models/ticket');
+const User = require('../models/user');
 
 module.exports = {
     createNewComment,
@@ -12,11 +13,14 @@ async function createNewComment(req, res){
     const commentContent = req.body.textarea;
     // Get the ticket
     const localTicket = await Ticket.findById(id);
+    const commenter = await User.findById(req.body.userID);
 
     // Create a new comment object
     const newComment = {
         content: commentContent,
-        datePosted: new Date() // Add the current date
+        user: commenter._id,
+        userName: commenter.name,
+        userAvatar: commenter.avatar,
     };
 
     // Add the comment to the ticket

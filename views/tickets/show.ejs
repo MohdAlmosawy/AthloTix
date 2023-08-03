@@ -241,7 +241,7 @@
 									</div>
 									<div class="media-body">
 										<h5 class="mb-1">User Name Goes here <small
-												class="text-muted"><%= comment.datePosted.toDateString() %> - <%= comment.datePosted.toLocaleTimeString() %></small></h5>
+												class="text-muted"><%= comment.createdAt.toDateString() %> - <%= comment.createdAt.toLocaleTimeString() %></small></h5>
 										<p class="mb-1"><%= comment.content %></p>
 									</div>
 								</div>
@@ -266,6 +266,8 @@
 		<form id="add-comment-form" method="POST" action="/tickets/<%= thisLocalTicket._id %>/comments">
 
 			<h4 class="card-title">Add a Comment</h4>
+
+			<input type="hidden" name="userID" value="<%= user._id %>">
 
 			<textarea name="textarea" id="textarea" cols="30" rows="8" class="form-control bg-transparent" placeholder="Please type your comment here"></textarea>
 

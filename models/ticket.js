@@ -6,9 +6,6 @@ const commentSchema = new Schema({
     content: {
       type: String,
     },
-    datePosted: {
-      type: Date,
-    },
   // add the 3 new properties below
   user: {
     type: Schema.Types.ObjectId,
