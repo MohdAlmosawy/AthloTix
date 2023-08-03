@@ -20,7 +20,7 @@ router.get('/oauth2callback', passport.authenticate(
   'google',
   {
     // the redirect location to dashboard
-    successRedirect: '/users/index', 
+    successRedirect: '../tickets',  
     failureRedirect: '/'
   }
 ));
