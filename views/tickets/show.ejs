@@ -87,7 +87,7 @@
 					</div>
 					<a class="timeline-panel text-muted" href="javascript:void(0);">
 					  <span><%= historyItem.date.toLocaleString() %></span>
-					  <h6 class="mb-0">Ticket "<%= historyItem.status %>" by <%= historyItem.userName %></h6>
+					  <h6 class="mb-0"><%= historyItem.userName %>: Ticket is "<%= historyItem.status %>".</h6>
 					</a>
 				  </li>
 				<% }) %>
