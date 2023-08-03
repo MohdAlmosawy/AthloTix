@@ -106,18 +106,20 @@
 							<span class="nav-text">Ticket Dashboard</span>
 						</a>                        
                     </li>
+                    <% if (user.type === 'Athlete' ) { %>
 					<li>
 						<a class="has-arrow ai-icon" href="../tickets/new" aria-expanded="false">
 							<i class="flaticon-contract"></i>
 							<span class="nav-text">Add Ticket</span>
 						</a>
 					</li>
-                    <li>
+                    <% } %>
+                    <!-- <li>
 						<a class="has-arrow ai-icon" href="javascript:void(0);" aria-expanded="false">
 							<i class="flaticon-monitor"></i>
 							<span class="nav-text">Reports</span>
 						</a>
-					</li>
+					</li> -->
                     <% if (user.type === 'manager' ) { %>
 					<li>
 						<a class="has-arrow ai-icon" href="../users/index" aria-expanded="false">
