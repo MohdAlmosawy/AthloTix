@@ -1,9 +1,58 @@
 <%- include('../partials/header') %>
 <div class="content-body">
 <div class="card-body col">
-    <!-- need edit design -->
-    <h1>User Details</h1>
-    <hr> 
+    <!--design-->
+
+    <div class="col-xl-12 col-lg-12">
+        <div class="clearfix">
+            <div class="card card-bx author-profile m-b30">
+                <div class="card-body">
+                    <div class="p-5">
+                        <div class="author-profile">
+                            <div class="author-media">
+                                <img src="<%= user.avatar %>" alt="">
+                                <!-- <div class="upload-link" title="" data-bs-toggle="tooltip" data-placement="right" data-original-title="update">
+                                    <input type="file" class="update-flie">
+                                    <i class="fa fa-camera"></i>
+                                </div> -->
+                            </div>
+                            <div class="author-info">
+                                <h6 class="title"><%= user.name %></h6>
+                                <span><%= user.type %></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-list">
+                        <ul>
+                            <li><a href="#"><span>gender:    </span><%= user.gender %></a></li>
+                            <li><a href="#"><span>sport:     </span><%= user.sport %></a></li>
+                            <li><a href="#"><span>email:     </span><%= user.email %></a></li>
+                            <li><a href="#"><span>height:    </span><%= user.height %></a></li>
+                            <li><a href="#"><span>weight:    </span><%= user.weight %></a></li>
+                            <li><a href="#"><span>DOB:       </span><%= user.DOB %></a></li>
+                            <li><a href="#"><span>bodySize:  </span><%= user.bodySize %></a></li>
+                            <li><a href="#"><span>footSize:  </span><%= user.footSize %></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="card-footer">
+                    <div class="input-group mb-3">
+                        <div class="form-control rounded text-center">Portfolio</div>
+                    </div>
+                    <div class="input-group">
+                        <a href="https://www.dexignlab.com/" class="form-control text-primary rounded text-start ">https://www.dexignlab.com/</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- need edit design
+        <h1>User Details</h1>
+        <hr>
+        <h2>Type: </h2>
+        <h3><%= user.name %></h3>
+        <hr>
+        <hr> 
         <h2>Type: </h2>
         <h3><%= user.type %></h3>
         <hr>
@@ -31,7 +80,7 @@
         <h2>footSize: </h2>
         <h3><%= user.footSize %></h3>
         <hr>
-        </section>
+        </section> -->
         <!-- Delete user 
         <form action="/users/?_method=DELETE" method="POST">
             <button class="btn btn-danger shadow btn-xs sharp" type="submit"><i class="fa fa-trash"></i></a></button>
