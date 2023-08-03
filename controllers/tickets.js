@@ -3,8 +3,10 @@ const Ticket = require("../models/ticket");
 const User = require("../models/user");
 
 async function ticketsIndex(req, res) {
-  const AllTickets = await Ticket.find({});
-  res.render('tickets/index', { title: 'All Tickets', AllTickets });
+  const user = await User.findById(req.user._id);
+  let allTickets = user.type === 'athlete' ? await Ticket.find({ user: req.user._id }) : await Ticket.find({})
+  
+  res.render('tickets/index', { title: 'All Tickets', allTickets });
 }
 
 function showNewTicketPage(req, res) {
@@ -27,12 +29,12 @@ function showNewTicketPage(req, res) {
 
 async function createTicket(req, res) {
   // Get the form data from the request body
-  const { user, category, status, title, description } = req.body;
+  const { category, status, title, description } = req.body;
 
   try {
     // Create a new ticket document in the database
     const newTicket = await Ticket.create({
-      user,
+      user: req.user._id,
       category,
       status,
       title,

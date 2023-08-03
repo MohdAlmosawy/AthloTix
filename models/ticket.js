@@ -53,11 +53,6 @@ const commentSchema = new Schema({
     comments: [commentSchema],
     
   // add the 3 new properties below
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: 'User',
-    required: true
-  },
   userName: String,
   userAvatar: String
 }, {
