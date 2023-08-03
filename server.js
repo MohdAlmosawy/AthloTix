@@ -1,3 +1,4 @@
+// file : /server.js
 const methodOverride = require("method-override");
 var createError = require("http-errors");
 var express = require("express");
@@ -15,6 +16,8 @@ require('./config/passport');
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+const ticketsRouter = require("./routes/tickets"); //ticket router
+const commentsRouter = require('./routes/comments'); //comment router
 
 var app = express();
 
@@ -44,6 +47,9 @@ app.use(function (req, res, next) {
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use(express.urlencoded({ extended: false }));
+app.use("/tickets", ticketsRouter); //ticket router used
+app.use("/", commentsRouter); //comment router used
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

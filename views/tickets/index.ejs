@@ -1,58 +1,61 @@
 <%- include('../partials/header') %>
-		
-		<!--**********************************
-            Content body start
-        ***********************************-->
-		<div class="content-body">
-			<!-- row -->
-			<div class="container-fluid">
-				<div class="row page-titles">
-					<h4>Dashboard</h1>
-				</div>
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="card">
-							<div class="card-header">
-								<h4 class="card-title">All Ticket</h4>
-								<a href="create-ticket.html" class="btn btn-primary">Add ticket</a>
-							</div>
-							<div class="card-body">
-								<div class="table-responsive ticket-table">
-									<table id="example" class="display dataTablesCard table-responsive-xl"
-										style="min-width: 845px">
-										<thead>
+
+<!--**********************************
+Content body start
+***********************************-->
+
+	<div class="content-body">
+		<!-- row -->
+		<div class="container-fluid">
+			<div class="row page-titles">
+				<h4>Dashboard</h1>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-header">
+							<h4 class="card-title">All Ticket</h4>
+							<a href="/tickets/new" class="btn btn-primary">Add ticket</a>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive ticket-table">
+								<table id="example" class="display dataTablesCard table-responsive-xl"
+									style="min-width: 845px">
+									<thead>
+										<tr>
+											<th>Title</th>
+											<th>Description</th>
+											<th>User</th>
+											<th>Category</th>
+											<th>Status</th>
+											<th>Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										<% AllTickets.forEach(function(T) { %>
 											<tr>
-												<th>Title</th>
-												<th>Description</th>
-												<th>User</th>
-												<th>Category</th>
-												<th>Status</th>
-												<th>Actions</th>
+											  <td><%= T.title %></td>
+											  <td><%= T.description %></td>
+											  <td><%= T.user %></td>
+											  <td><%= T.category %></td>
+											  <td>
+												<span class="badge <%= (T.status === 'Open') ? 'badge-dark' : (T.status === 'In Review') ? 'badge-warning' : (T.status === 'Action Needed') ? 'badge-dark' : (T.status === 'Completed') ? 'badge-success' : 'badge-danger' %>"><%= T.status %></span>
+											  </td>
+											  <td><a href="/tickets/<%= T._id %>">Show Details</a></td>
 											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>I need a new shoe</td>
-												<td>i asked for a new shoe from a month and no response</td>
-												<td>Mustafa</td>
-												<td>Request</td>
-												<td>
-													<span class="badge badge-info">Inprogress</span>
-												</td>
-												<td><a href="#">Show Details</a></td>
-											</tr>
-										</tbody>
-		
-									</table>
-								</div>
+										<% }) %>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-        <!--**********************************
-            Content body end
-        ***********************************-->
+	</div>
 
-        <%- include('../partials/footer') %>
+<!--**********************************
+Content body end
+***********************************-->
+
+	<%- include('../partials/footer') %>
