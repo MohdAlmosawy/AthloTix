@@ -103,7 +103,7 @@
                     <li>
 						<a class="has-arrow ai-icon"  href="../tickets" aria-expanded="false">
 							<i class="flaticon-layout"></i>
-							<span class="nav-text">Dashboard</span>
+							<span class="nav-text">Ticket Dashboard</span>
 						</a>                        
                     </li>
 					<li>
@@ -112,6 +112,13 @@
 							<span class="nav-text">Add Ticket</span>
 						</a>
 					</li>
+                    <li>
+						<a class="has-arrow ai-icon" href="javascript:void(0);" aria-expanded="false">
+							<i class="flaticon-monitor"></i>
+							<span class="nav-text">Reports</span>
+						</a>
+					</li>
+                    <% if (user.type === 'manager' ) { %>
 					<li>
 						<a class="has-arrow ai-icon" href="../users/index" aria-expanded="false">
 							<i class="flaticon-381-id-card-4"></i>
@@ -119,17 +126,12 @@
 						</a>
 					</li>
 					<li>
-						<a class="has-arrow ai-icon" href="javascript:void(0);" aria-expanded="false">
-							<i class="flaticon-monitor"></i>
-							<span class="nav-text">Reports</span>
-						</a>
-					</li>
-					<li>
 						<a class="has-arrow ai-icon" href="../users/new" aria-expanded="false">
 							<i class="flaticon-admin"></i>
-							<span class="nav-text">Settings</span>
+							<span class="nav-text">Add User</span>
 						</a>
 					</li>
+                    <% } %>
 			</div>
         </div>
         <!--**********************************

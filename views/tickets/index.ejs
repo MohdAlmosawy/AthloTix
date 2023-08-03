@@ -15,8 +15,12 @@ Content body start
 					<div class="card">
 						<div class="card-header">
 							<h4 class="card-title">All Ticket</h4>
+							<!-- hide the button if the user is manager -->
+							<% if (user.type === 'athlete' ) { %>
 							<a href="/tickets/new" class="btn btn-primary">Add ticket</a>
+							<% } %>
 						</div>
+
 						<div class="card-body">
 							<div class="table-responsive ticket-table">
 								<table id="example" class="display dataTablesCard table-responsive-xl"
