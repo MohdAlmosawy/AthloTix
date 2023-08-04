@@ -19,12 +19,17 @@
 								</div>
 								<div class="profile-details">
 									<div class="profile-name px-3 pt-2">
-										<h4 class="text-primary mb-0">Player Name</h4>
-										<p>sport</p>
+										<h4 class="text-primary mb-0">
+											<% users.forEach(function (u) { %></h4>
+											<% if(u._id.toString() === thisLocalTicket.user.toString()) { %>
+											<%= u.name %> </h4>
+							
+											<p><%= u.sport %></p>
 									</div>
 									<div class="profile-email px-2 pt-2">
-										<h4 class="text-muted mb-0">user@email.com</h4>
-										<p>gender</p>
+										<h4 class="text-muted mb-0"><%= u.email %></h4>
+										<p><%= u.gender %></p>
+										<% } }); %>
 									</div>
 									<div class="dropdown ms-auto">
 										<a href="#" class="btn btn-primary ms-auto light sharp"
@@ -41,7 +46,7 @@
 											</svg></a>
 										<ul class="dropdown-menu dropdown-menu-end">
 											<li class="dropdown-item"><i
-													class="fa fa-user-circle text-primary me-2"></i> View profile
+													class="fa fa-user-circle text-primary me-2"></i><a href="/users/<%= thisLocalTicket.user %>">View profile </a>
 											</li>
 										</ul>
 									</div>
@@ -138,6 +143,7 @@
 								<!-- <div class="dd-handle"></div> -->
 								<div class="accordion">
 									<!-- Accordion Item 1 -->
+		<% if (user.type === 'manager' ) { %>								
 	<div class="accordion-item">
 		<div class="accordion-header"
 			id="heading-1">
@@ -220,6 +226,7 @@
 			</div>
 		</div>
 	</div>
+	<% } %>
 								</div>
 							</li>
 						</div>

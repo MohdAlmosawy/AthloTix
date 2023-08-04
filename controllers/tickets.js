@@ -13,7 +13,7 @@ async function showNewTicketPage(req, res) {
   // We'll want to be able to render an  
   // errorMsg if the create action fails
   const user = await User.findById(req.user._id);
-  let users = user.type === 'athlete' ? res.render('tickets/new', { title: 'Create New Ticket', errorMsg: '' }) : res.redirect("../tickets");
+   let users = user.type === 'athlete' ? res.render('tickets/new', {title: 'Create New Ticket', errorMsg: '' }) : res.redirect("../tickets");
 }
 
 //createTicket
@@ -59,8 +59,9 @@ async function createTicket(req, res) {
 
 async function showTicket(req, res) {
   try {
+    const users = await User.find({});
     const thisLocalTicket = await Ticket.findById(req.params.id);
-    res.render('tickets/show', { title: 'Ticket', thisLocalTicket });
+    res.render('tickets/show', { title: 'Ticket', thisLocalTicket, users });
   } catch (err) {
     console.log(err);
   }
