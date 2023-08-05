@@ -1,135 +1,246 @@
-## SEI project2
-# AthloTix
+# SEI Project 2: AthloTix - Your Ticket to Success
 
-The Ticketing System for the Bahrain Athletics Association is a comprehensive web application that facilitates efficient communication and management between players and the association's management team. The system aims to streamline the process of handling inquiries, requests, and issue reporting within the athletics community. By providing a user-friendly platform, the app seeks to enhance user engagement, improve issue resolution times, and create a seamless experience for all stakeholders involved.
+## Table of Contents
 
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Planning and Design](#planning-and-design)
+- [Development](#development)
+- [Testing and Bug Fixing](#testing-and-bug-fixing)
+- [Coding Approach and Techniques](#coding-approach-and-techniques)
+- [Coding Standards and Contribution Guidelines](#coding-standards-and-contribution-guidelines)
+- [Summary](#summary)
+- [Contact](#contact)
 
-# Table of Contents
-[Description](#Description)
-[Planning and Design](#Planning and Design)
-[Development](#Development)
-[Testing and Bug Fixing](#Testing and Bug Fixing)
-[Installation](#Installation)
-[Usage](#Usage)
-[API Reference](#API Reference)
-[Contributing](#Contributing)
-[License](#License)
-[Contact](#Contact)
+## Project Overview
 
+AthloTix is a comprehensive ticketing system designed for the Bahrain Athletics Association. This web application serves as a powerful tool for efficient communication and management between athletes and the association's management team. With the aim of streamlining the handling of inquiries, requests, and issue reporting within the athletics community, AthloTix provides a user-friendly platform that enhances user engagement, accelerates issue resolution, and offers a seamless experience to all stakeholders involved.
 
-# Description
-AthloTix is a CRUD application that allows users to create, read, update, and delete records of users. Users can add new player, edit existing ones, search for athletes by name, and delete athletes from the database.
+Jump to: [Table of Contents](#table-of-contents)
+## Features
 
+- User authentication and authorization for athletes and management personnel.
+- Creation and tracking of tickets for inquiries, requests, and issues.
+- Real-time status updates and history tracking for efficient monitoring.
+- Comment system for seamless communication between users.
+- Kanban methodology for effective task management.
+- Responsive design for optimal user experience across devices.
 
-# Planning and Design
+Jump to: [Table of Contents](#table-of-contents)
+## Technologies Used
+
+- **Frontend**: HTML, CSS, JavaScript, EJS (View Templating)
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB, Mongoose (Object Modeling)
+- **Authentication**: Passport.js
+
+Jump to: [Table of Contents](#table-of-contents)
+## Getting Started
+
+- [Installation](#installation)
+- [Usage](#usage)
+
+### Installation
+
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
+
+### Usage
+
+1. Configure your MongoDB connection in `config/database.js`.
+2. Run the application using `npm start`.
+3. Access the application in your browser at `http://localhost:3000`.
+
+## Planning and Design
+
 Before starting the development process for AthloTix, we carefully planned and designed the application to ensure that it met the needs of our target audience. This involved the following steps:
 
-## Identifying Requirements: 
-We started by identifying the requirements for the project, which included determining the target audience, defining the core features and functionality, and outlining any specific technical requirements. We determined that our target audience would be coaches and trainers who needed to keep track of their athletes' performance data, and that the core features of the application would include the ability to create, read, update, and delete athlete records.
 
-## Creating User Stories: 
-Once we had identified the requirements, we created user stories to help us understand how users would interact with the application. This involved defining the key use cases, identifying any potential pain points or areas of confusion, and designing a user interface that was intuitive and easy to use. We determined that users would need to be able to add new athletes, edit existing ones, search for athletes by name, and delete athletes from the database.
+1. [Identifying Requirements](#identifying-requirements)
+2. [Creating User Stories](#creating-user-stories)
+3. [Wireframing and Prototyping](#wireframing-and-prototyping)
+4. [Architecture and Data Modeling](#architecture-and-data-modeling)
 
-## Wireframing and Prototyping: 
-To bring our design ideas to life, we created wireframes and prototypes of the application. This allowed us to visualize the user interface and make any necessary changes before moving on to the development phase. We designed a simple, clean user interface that would allow users to easily navigate the application and perform the core CRUD operations.
+### Identifying Requirements
 
-## Architecture and Data Modeling: 
-We also spent time designing the architecture of the application and creating a data model that would support the core features and functionality. This involved determining the best technology stack to use, creating a database schema, and defining the APIs and services that would power the application. We decided to use Node.js and Express for the server-side code, and MongoDB for the database. We created a data model that included a collection for athletes, with fields for name, age, gender, sport, and performance data.
+We started by identifying the requirements for the project, including determining the target audience, defining core features and functionality, and outlining any specific technical requirements. Our target audience consists of coaches and trainers who need to track athlete performance data. Core features include CRUD operations for athlete records.
 
-By taking the time to carefully plan and design the AthloTix application, we were able to create an application that met the needs of our target audience and provided a great user experience. Throughout the development process, we continued to iterate on our design ideas and make improvements based on user feedback, ensuring that the final product was both functional and user-friendly.
+### Creating User Stories
 
-# Development
+User stories were created to understand how users would interact with the application. Key use cases were defined, potential pain points were identified, and an intuitive user interface was designed. User actions such as adding, editing, searching, and deleting athletes were mapped out.
+
+### Wireframing and Prototyping
+
+Wireframes and prototypes were developed to visualize the user interface. This step allowed us to make necessary design changes before proceeding to development. A clean and user-friendly interface was designed to facilitate seamless user interactions.
+
+### Architecture and Data Modeling
+
+The application's architecture and data model were carefully planned. Node.js and Express were chosen for the server, MongoDB for the database. The data model includes athlete details such as name, age, gender, sport, and performance data.
+
+Jump to: [Table of Contents](#table-of-contents)
+## Development
+
 The development of AthloTix involved the following steps:
 
-## Environment Setup:
- We started by setting up our development environment, which included installing Node.js, Express, and MongoDB. We also set up a Git repository to manage our code and collaborated using a version control system.
+- [Environment Setup](#environment-setup)
+- [Server-Side Code](#server-side-code)
+- [User Interface](#user-interface)
+- [Integration](#integration)
 
-## Server-Side Code: 
-Once our development environment was set up, we began to write the server-side code. This involved creating routes and handlers for the CRUD operations, connecting to the MongoDB database, and implementing input validation to ensure that users entered valid data.
+### Environment Setup
 
-## User Interface: 
-While we were working on the server-side code, we also began to develop the user interface. We used HTML, CSS, and Bootstrap to create a clean, modern interface that was easy to use.
+The development environment was set up by installing Node.js, Express, and MongoDB. A Git repository was established for code management, enabling effective collaboration.
 
-## Integration: 
-Once both the server-side code and the user interface were developed, we integrated the two parts of the application. We used JavaScript and jQuery to make API calls to the server and update the user interface in real time.
+### Server-Side Code
 
-Testing: Throughout the development process, we tested the application to ensure that it was working as expected. We used automated tests to test the server-side code, and manual testing to test the user interface and the integration between the server and the client.
+Server-side code was written, including routes and handlers for CRUD operations. Connection to the MongoDB database and input validation were implemented to ensure data integrity.
 
-## Deployment: 
-Once the development was complete and all the tests had passed, we deployed AthloTix to a production environment. We used Heroku to host the application and MongoDB Atlas for the database.
+### User Interface
 
-# Testing and Bug Fixing
-Testing and bug fixing were critical components of the development process for AthloTix. We used a combination of automated and manual testing to ensure that the application was reliable, secure, and easy to use.
+Concurrently with server-side development, the user interface was created using HTML, CSS, and Bootstrap. The goal was to design a modern and intuitive interface.
+
+### Integration
+
+Server-side code and the user interface were integrated using JavaScript and jQuery. This integration facilitated real-time updates and seamless user interactions.
+
+Jump to: [Table of Contents](#table-of-contents)
+## Testing and Bug Fixing
+
+Testing and bug fixing were essential throughout the development process:
+
+- [Manual Testing](#manual-testing)
+- [Bug Fixing](#bug-fixing)
+### Manual Testing
+
+Manual testing was conducted to ensure proper functioning and responsiveness across devices and browsers. Security features and user interactions were thoroughly tested.
+
+### Bug Fixing
+
+Bugs and issues identified during testing were tracked and prioritized. Debugging tools and manual testing were used to resolve these issues promptly.
+
+By prioritizing testing and bug fixing, we created a reliable, secure, and user-friendly CRUD application.
+
+Jump to: [Table of Contents](#table-of-contents)
+
+## Coding Approach and Techniques
+
+- [Technical Analysis](#technical-analysis)
+  - [User Schema](#user-schema)
+  - [Controllers](#controllers)
+  - [User Authentication and Authorization](#user-authentication-and-authorization)
+  - [Database Interaction with Mongoose](#database-interaction-with-mongoose)
+  - [Real-time Status Updates and History Tracking](#real-time-status-updates-and-history-tracking)
+  - [Comment System](#comment-system)
+  - [Responsive Design](#responsive-design)
+- [Additional Technical Aspects](#additional-technical-aspects)
+  - [RESTful API Design](#restful-api-design)
+  - [Error Handling and Validation](#error-handling-and-validation)
+  - [Data Security and Privacy](#data-security-and-privacy)
+  - [Modular Codebase](#modular-codebase)
+  - [Version Control and Collaboration](#version-control-and-collaboration)
+  - [Continuous Integration and Deployment](#continuous-integration-and-deployment)
+  - [Documentation](#documentation)
+
+### Technical Analysis
+
+#### User Schema
+
+The project utilizes a user schema that captures user details, including personal information, role (athlete/manager), and authentication data. Passport.js is integrated for secure authentication and authorization.
+
+#### Controllers
+
+Controllers manage user-related and ticket-related operations. The `users.js` controller handles CRUD operations for users, while the `tickets.js` controller manages ticket creation, status updates, and comment addition.
+
+#### User Authentication and Authorization
+
+Passport.js is employed for user authentication, enabling secure login and session management. Different user roles (athlete/manager) are distinguished to grant role-based access.
+
+#### Database Interaction with Mongoose
+
+Mongoose simplifies database operations, providing data validation, modeling, and queries. It ensures data integrity by enforcing predefined rules.
+
+Jump to: [Table of Contents](#table-of-contents)
+#### Real-time Status Updates and History Tracking
+
+Ticket status changes are recorded using the `history` array in the ticket schema. Each status change is timestamped and associated with the responsible user.
+
+#### Comment System
+
+A comment system allows users to collaborate on tickets. Comments are associated with specific tickets and store user details and timestamps.
+
+#### Responsive Design
+
+The frontend is designed responsively using HTML, CSS, JavaScript, and EJS. This ensures a consistent user experience across different devices.
+
+Jump to: [Table of Contents](#table-of-contents)
+### Additional Technical Aspects
+
+#### RESTful API Design
+
+AthloTix follows RESTful API design principles, ensuring logical and consistent endpoint naming, HTTP methods, and resource representations.
+
+#### Error Handling and Validation
+
+Custom error handling middleware is implemented to provide meaningful error messages and enhance the user experience.
+
+#### Data Security and Privacy
+
+User passwords are hashed and stored securely. Sensitive user data is protected through authentication and authorization mechanisms.
+
+Jump to: [Table of Contents](#table-of-contents)
+#### Modular Codebase
+
+The project is structured using modular design principles, promoting code reusability and maintainability.
+
+#### Version Control and Collaboration
+
+Git and GitHub are used for version control, enabling effective collaboration, branch management, and conflict resolution.
+
+#### Continuous Integration and Deployment
+
+The project utilizes continuous integration tools to automate testing and deployment processes, ensuring code quality and reliability.
+
+#### Documentation
+
+Codebase documentation is provided using comments and README files, promoting code understanding and onboarding for new developers.
+
+Jump to: [Table of Contents](#table-of-contents)
+## Coding Standards and Contribution Guidelines
+
+We welcome contributions from the community to enhance AthloTix. To ensure a smooth and collaborative development process, please adhere to the following coding standards and guidelines:
+
+1. **Code Consistency**: Maintain consistent coding style by following the established conventions throughout the codebase.
+
+2. **Modularization**: Encourage modular code design to improve code maintainability and readability.
+
+3. **Descriptive Naming**: Use descriptive variable and function names that convey their purpose and functionality.
+
+4. **Comments**: Provide clear and concise comments to explain complex logic, algorithms, and important sections of the code.
+
+5. **Error Handling**: Implement robust error handling to gracefully handle exceptions and provide meaningful error messages to users.
+
+6. **Testing**: Write unit tests for new functionality and ensure existing tests are not broken.
+
+7. **Documentation**: Update the README and inline comments as needed to reflect changes and additions.
+
+8. **Pull Requests**: When submitting a pull request, provide a clear description of the changes made and reference any related issues.
+
+9. **Collaboration**: Maintain open and respectful communication within the development team and the broader community.
+
+10. **Security**: Prioritize data security and user privacy in all code contributions.
+
+We appreciate your dedication to maintaining code quality and fostering a collaborative environment. Let's work together to ensure AthloTix continues to thrive!
+
+Jump to: [Table of Contents](#table-of-contents)
+## Summary
+
+AthloTix exemplifies the team's expertise in web development, collaboration, and application of industry best practices. The project demonstrates the successful integration of various technologies and techniques to create an efficient, secure, and user-friendly ticketing system for the Bahrain Athletics Association.
 
 
-## Manual Testing
-conducted manual testing to test the user interface and the integration between the server and the client. We tested the application on different devices and browsers to ensure that it was responsive and worked correctly on all platforms. We also tested the application's security features.
+## Contact
 
-## Bug Fixing
-During the testing process, we identified a number of bugs and issues that needed to be fixed. We used a bug tracking tool to log and prioritize these issues, and then worked to fix them in a timely manner. We used a combination of debugging tools and manual testing to identify the root cause of each issue, and then implemented fixes and tested the changes to ensure that they resolved the issue without introducing new problems.
-
-By taking testing and bug fixing seriously, we were able to create a high-quality CRUD application that is reliable, secure, and easy to use. We continue to monitor the application for bugs and issues, and work to fix any that are identified in a timely manner.
-
-
-
-
-# Installation
-To install AthloTix, follow these steps:
-
-Clone the repository: git clone https://git.generalassemb.ly/mohdalmosawy/AthloTix#athlotix
-Install the dependencies: npm install
-Start the server: npm start
-Open the application in your browser: http://localhost:3000/AthloTix
-
-# Usage
-To use AthloTix, follow these steps:
-
-Create a new athlete record by clicking the "Add User" button.
-Fill in the Player information in the form that appears.
-Click the "Save" button to save the player record.
-View a list of all athletes by clicking the "View User" button.
-Edit an athlete record by clicking the "Edit" button next to the athlete's name.
-Make the desired changes to the athlete's information in the form that appears.
-Click the "Save" button to save the changes.
-Search for an athlete by name by entering a name in the search bar and clicking the "Search" button.
-Delete an athlete record by clicking the "Delete" button next to the player name in the list of users.
-
-
-# API Reference
-The AthloTix CRUD application is built using Node.js and Express, with a MongoDB database for storing athlete records. The application exposes a RESTful API that allows users to perform CRUD operations on athlete records.
-
-## Endpoints
-The AthloTix CRUD application exposes the following endpoints:
-
-GET /user: Returns a list of all players in the database.
-GET /user/:id: Returns the player record with the specified ID.
-POST /user: Creates a new player record in the database.
-PUT /user/:id: Updates the player record with the specified ID.
-DELETE /user/:id: Deletes the player record with the specified ID.
-
-
-
-# Contributing
-We welcome contributions to the AthloTix CRUD application from the community. If you would like to contribute, please follow these guidelines:
-
-Fork the AthloTix CRUD repository on GitHub.
-Clone your forked repository to your local machine.
-Create a new branch for your changes: git checkout -b my-new-feature.
-Make your changes to the code.
-Test your changes thoroughly to ensure that they work as expected.
-Commit your changes: git commit -am 'Add some feature'.
-Push your changes to your forked repository: git push origin my-new-feature.
-Submit a pull request to the AthloTix CRUD repository on GitHub.
-
-# License
-MIT License
-
-Copyright (c) [2023] [AthloTix]
-
-The AthloTix CRUD application is licensed under the [MIT License](https://opensource.org/license/mit/).
-
-
-# Contact
 If you have any questions, comments, or feedback about the AthloTix CRUD application, please feel free to contact us. You can reach us by email at mohd.s.aqeel@gmail.com, or by submitting a GitHub issue to the AthloTix CRUD repository.
 
 We are always looking for ways to improve the AthloTix CRUD application, and we value input from our users. If you have a suggestion for a new feature or improvement, please let us know.
@@ -137,3 +248,5 @@ We are always looking for ways to improve the AthloTix CRUD application, and we 
 If you are interested in contributing to the AthloTix CRUD application, please see the Contributing guide for more information on how to get involved. We welcome contributions from all members of the community, and we are committed to maintaining a welcoming and inclusive environment for all contributors.
 
 Thank you for using the AthloTix CRUD application, and we look forward to hearing from you!
+
+Jump to: [Table of Contents](#table-of-contents)
