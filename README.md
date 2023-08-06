@@ -53,6 +53,100 @@ Jump to: [Table of Contents](#table-of-contents)
 2. Run the application using `npm start`.
 3. Access the application in your browser at `http://localhost:3000`.
 
+## User Manual
+
+# [Managing AthloTix: A Step-by-Step Navigation](https://app.tango.us/app/workflow/ca22e52f-7002-4544-a2a5-311012e29486?utm_source=markdown&utm_medium=markdown&utm_campaign=workflow%20export%20links)
+
+__Creation Date:__ August 6, 2023  
+__Created By:__ Mohd Almosawy  
+[View most recent version on Tango.us](https://app.tango.us/app/workflow/ca22e52f-7002-4544-a2a5-311012e29486?utm_source=markdown&utm_medium=markdown&utm_campaign=workflow%20export%20links)
+
+
+
+***
+
+
+
+
+## # [AthloTix - Bahrain Athletic Association Support Ticketing System](http://localhost:3000/)
+
+
+### 1. AthloTix Login page
+![Step 1 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/41ac5e5a-d3ed-46b6-866b-70b475921538/91028369-8431-4a4a-9075-37b7bae51b3d.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&fp-z=1.0029&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=2&mark-y=2&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0xMTk3Jmg9ODcxJmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D)
+
+
+### 2. Log in using  your Google Account
+![Step 2 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/c304bbf3-76af-449a-8ea6-1db815f1fcc3/aa38fcaf-a97e-482f-ae03-223885de3ef6.png?crop=focalpoint&fit=crop&fp-x=0.1668&fp-y=0.4096&fp-z=2.4636&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=337&mark-y=411&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0zMTMmaD01MyZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw)
+
+
+### 3. As a manager you can see all tickets
+![Step 3 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/fe52f67a-4dcb-45ec-812f-335f2a914376/8b6a6515-11da-48a8-a9ca-e381b523dae1.png?crop=focalpoint&fit=crop&fp-x=0.5241&fp-y=0.5973&fp-z=1.1167&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=38&mark-y=165&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0xMTI1Jmg9NjMyJmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D)
+
+
+### 4. as a manager you will have a button to show all users
+![Step 4 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/ce24cb76-3968-47dc-9019-581794ab85d5/00b70eea-a3e5-46c2-b202-8e6c46351660.png?crop=focalpoint&fit=crop&fp-x=0.0375&fp-y=0.1877&fp-z=2.7088&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=9&mark-y=365&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0yMjUmaD0xNDUmZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D)
+
+
+### 5. as a manager you can see all users list
+![Step 5 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/db813a0b-5229-48a7-b404-987ad47f911e/ee90278b-7a1f-4e2d-be0f-cc046995b3b3.png?crop=focalpoint&fit=crop&fp-x=0.5241&fp-y=0.6512&fp-z=1.1167&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=38&mark-y=238&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0xMTI1Jmg9NTkzJmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D)
+
+
+### 6. as a manager you can click on this icon
+![Step 6 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/40ea2be7-7e82-4188-b421-3d24f52096c5/98bee2ad-6847-4cf0-b65b-b9d821c41df1.png?crop=focalpoint&fit=crop&fp-x=0.0375&fp-y=0.2451&fp-z=2.7088&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=9&mark-y=365&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0yMjUmaD0xNDUmZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D)
+
+
+### 7. or by clicking on this button
+![Step 7 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/c949a001-3487-4a93-bb2b-3a8811c1d7a2/9cbf62b8-c45d-4d43-9703-d2bef2ca6713.png?crop=focalpoint&fit=crop&fp-x=0.8743&fp-y=0.3123&fp-z=2.8947&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=637&mark-y=380&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0yNTMmaD0xMTUmZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D)
+
+
+### 8. as a manager you can create a new user
+![Step 8 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/d6ca2aa1-53b1-45a1-9997-2408cdff5104/98b3600a-84f9-45dc-be8b-06820365a9cb.png?crop=focalpoint&fit=crop&fp-x=0.5241&fp-y=0.4249&fp-z=1.0903&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=23&mark-y=173&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0xMTU1Jmg9NDY2JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D)
+
+
+### 9. when login as a user you can see all of your tickets
+![Step 9 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/f5252aa4-616f-4236-8639-c816ccb0b7e0/1bb9321d-0ce4-4a1c-a0bf-4d877ba20e69.png?crop=focalpoint&fit=crop&fp-x=0.5263&fp-y=0.3671&fp-z=1.1025&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=27&mark-y=332&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0xMTQ3Jmg9NDUmZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D)
+
+
+### 10. as a user you can create a ticket
+![Step 10 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/5bd6d6fd-7e41-4a33-969e-4b75460de775/18e61f19-1492-47b9-ad27-07f72c91fa96.png?crop=focalpoint&fit=crop&fp-x=0.9049&fp-y=0.2223&fp-z=2.8947&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=735&mark-y=380&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0yNzAmaD0xMTUmZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D)
+
+
+### 11. by filling up this forum
+![Step 11 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/f1652f11-3739-433b-bf5f-45136339ff65/626c84ca-6e2d-439f-a769-fa9ae047b695.png?crop=focalpoint&fit=crop&fp-x=0.5241&fp-y=0.5124&fp-z=1.0539&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=2&mark-y=29&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0xMTk2Jmg9ODE3JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D)
+
+
+### 12. from your ticket dashboard
+![Step 12 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/8e45d2fa-d20d-4c2e-97dd-bfed04e8991b/d9e24624-0c72-4bf6-ae89-d77272c27b6a.png?crop=focalpoint&fit=crop&fp-x=0.5263&fp-y=0.3671&fp-z=1.1025&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=27&mark-y=332&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0xMTQ3Jmg9NDUmZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D)
+
+
+### 13. Click on Show Details
+![Step 13 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/9b429818-e0d6-4fdf-99ea-260786a0a7de/de08612e-1d91-4022-9500-591830ba16e5.png?crop=focalpoint&fit=crop&fp-x=0.8375&fp-y=0.3666&fp-z=3.0704&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=481&mark-y=403&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0yNDImaD02OSZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw)
+
+
+### 14. to see a current ticket details
+![Step 14 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/43853122-f9c3-4023-adf7-c6d932002995/ef7d101c-d542-4cfc-ba45-7d1ff59b5f4d.png?crop=focalpoint&fit=crop&fp-x=0.5184&fp-y=0.4298&fp-z=1.0405&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=1&mark-y=48&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0xMTk3Jmg9Njg3JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D)
+
+
+### 15. any user can click on his picture
+![Step 15 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/dc3b001b-b38a-431b-aeef-8aee650e286b/2f55b04e-7757-44a8-bfc3-14576ad096e5.png?crop=focalpoint&fit=crop&fp-x=0.9301&fp-y=0.0272&fp-z=2.9712&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=745&mark-y=23&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz00MTEmaD05NSZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw)
+
+
+### 16. and navigate to his profile page
+![Step 16 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/4544a292-dc39-425b-be50-ce2484f3ca14/a0fe6673-f8a8-4a76-9a9d-ff747ad12c6f.png?crop=focalpoint&fit=crop&fp-x=0.9409&fp-y=0.0771&fp-z=3.0336&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=814&mark-y=165&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0zNDEmaD03OSZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw)
+
+
+### 17. Click on Mohd Almosawy…
+![Step 17 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/b6526632-aa23-4f29-b6f8-e354d8a40605/10540597-e786-4041-8918-e40795fa0804.png?crop=focalpoint&fit=crop&fp-x=0.5184&fp-y=0.3202&fp-z=1.0405&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=1&mark-y=48&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0xMTk3Jmg9NDg4JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D)
+
+
+### 18. and also you can logout from the system
+![Step 18 screenshot](https://images.tango.us/workflows/ca22e52f-7002-4544-a2a5-311012e29486/steps/110ce169-1cea-4e9b-b310-ac3425287d21/cb5b80e8-b0ee-4766-bd9d-924a5719e60f.png?crop=focalpoint&fit=crop&fp-x=0.9409&fp-y=0.1018&fp-z=3.0336&w=1200&border=2%2CF4F2F7&border-radius=8%2C8%2C8%2C8&border-radius-inner=8%2C8%2C8%2C8&blend-align=bottom&blend-mode=normal&blend-x=0&blend-w=1200&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&mark-x=814&mark-y=231&m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTYlMkNGRjc0NDImdz0zNDEmaD03OSZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw)
+
+<br/>
+
+***
+Created with [Tango.us](https://tango.us?utm_source=markdown&utm_medium=markdown&utm_campaign=workflow%20export%20links)
+
 ## Planning and Design
 
 Before starting the development process for AthloTix, we carefully planned and designed the application to ensure that it met the needs of our target audience. This involved the following steps:
